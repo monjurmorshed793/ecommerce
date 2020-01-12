@@ -13,6 +13,7 @@ public class Product {
     @ManyToOne
     private ProductCategory productCategory;
     private String name;
+    private String description;
     private String image;
     private BigDecimal price;
     @Enumerated(EnumType.ORDINAL)
@@ -22,6 +23,14 @@ public class Product {
 
     public Product(){
 
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Long getId() {
